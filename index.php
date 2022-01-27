@@ -1,3 +1,4 @@
+
 <!DOCTYPE HTML>
 <!--
 	Strata by HTML5 UP
@@ -80,6 +81,19 @@
 			<p>I am available for hire and open to any ideas of cooperation.</p>
 			<div class="row">
 				<div class="col-8 col-12-small">
+					<?php 
+					$mgs="";
+					if(isset($_GET['error']))
+					{
+						$msg="Please fill in the Blanks";
+						echo'<div class="alert alert-danger">'. $msg.'</div>';
+					}
+					if(isset($_GET['success']))
+					{
+						$msg="Your message has been sent";
+						echo'<div class="alert alert-success">'. $msg.'</div>';
+					}
+					?>
 					<form method="post" action="contact.php">
 						<div class="row gtr-uniform gtr-50">
 							<div class="col-6 col-12-xsmall"><input type="text" name="name" id="name"
@@ -90,7 +104,7 @@
 									rows="4"></textarea></div>
 						</div>
 						<ul class="actions">
-							<li><input type="submit" value="Send Message" /></li>
+							<li><input type="submit" value="Send Message" name="send"/></li>
 						</ul>
 					</form>
 					
