@@ -4,7 +4,7 @@ $visitor_email=$_POST['email'];
 $message=$_POST['message'];
 
 //put serval link
-$email_from="Rawan's portfolio";
+$email_from="https://rorokhf.github.io/My-portfolio/";
 $email_subject="";
 $email_body="User Name: $name.\n".
                 "User Email: $visitor_email.\n".
